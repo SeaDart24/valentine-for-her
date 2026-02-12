@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day, Sreenidhyee!</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="hearts-container">
+            <div class="floating-heart">❤️</div>
+            <div class="floating-heart">💕</div>
+            <div class="floating-heart">💖</div>
+            <div class="floating-heart">💗</div>
+            <div class="floating-heart">💝</div>
+        </div>
+        
+        <main class="valentine-card">
+            <header class="card-header">
+                <h1 class="main-title">Happy Valentine's Day</h1>
+                <h2 class="name-title">Sreenidhyee</h2>
+            </header>
+            
+            <section class="message-section">
+                <div class="envelope">
+                    <div class="envelope-flap" id="envelopeFlap">
+                        <span class="envelope-text">Click to open</span>
+                    </div>
+                    <div class="letter" id="letter">
+                        <p class="letter-text">
+                            My dearest Sreenidhyee,
+                        </p>
+                        <p class="letter-text">
+                            I wanted to create something special to ask you the most important question...
+                            Will you be my Valentine this year?
+                        </p>
+                        <p class="letter-text">
+                            Your smile brightens my world, your laughter is my favorite melody, 
+                            and your presence makes every moment special. I would be the happiest 
+                            person if you would celebrate Valentine's Day with me.
+                        </p>
+                        <p class="letter-text">
+                            You are the most amazing person I've ever met - kind, beautiful, 
+                            intelligent, and full of life. Every day with you is a gift, 
+                            and I'm grateful for every moment we share together.
+                        </p>
+                        <p class="letter-text">
+                            So what do you say? Will you make my Valentine's dreams come true?
+                        </p>
+                        <p class="signature">
+                            With all my love ❤️
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="interactive-section">
+                <div class="reasons-container">
+                    <h3>Why I Love You</h3>
+                    <div class="reasons-list" id="reasonsList">
+                        <div class="reason-item">Your beautiful smile</div>
+                    </div>
+                    <button class="add-reason-btn" id="addReasonBtn">Add another reason</button>
+                </div>
+                
+                <div class="music-section">
+                    <h3>Our Song(s)</h3>
+                    <div class="music-player">
+                        <button class="play-btn" id="playBtn">▶️ Play</button>
+                        <div class="song-info">
+                            <p class="song-title">Perfect - Ed Sheeran</p>
+                            <p class="song-artist">The song that makes me think of you</p>
+                        </div>
+                        <div class="song-controls">
+                            <button class="next-btn" id="nextBtn">⏭️ Next</button>
+                            <button class="prev-btn" id="prevBtn">⏮️ Prev</button>
+                        </div>
+                        <audio id="songAudio" preload="auto">
+                            <source src="assets/music/Hey KAALYANI.mp3" type="audio/mpeg">
+                            <source src="assets/music/Hey KAALYANI.m4a" type="audio/mp4">
+                            <source src="assets/music/Hey KAALYANI.ogg" type="audio/ogg">
+                            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                    <div class="playlist" id="playlist">
+                        <div class="playlist-item active" data-song="0">
+                            <span class="song-number">1</span>
+                            <div class="song-details">
+                                <p class="playlist-title">🎵 Surprise Song 1</p>
+                                <p class="playlist-artist">Click to reveal</p>
+                            </div>
+                        </div>
+                        <div class="playlist-item" data-song="1">
+                            <span class="song-number">2</span>
+                            <div class="song-details">
+                                <p class="playlist-title">🎵 Surprise Song 2</p>
+                                <p class="playlist-artist">Click to reveal</p>
+                            </div>
+                        </div>
+                        <div class="playlist-item" data-song="2">
+                            <span class="song-number">3</span>
+                            <div class="song-details">
+                                <p class="playlist-title">🎵 Surprise Song 3</p>
+                                <p class="playlist-artist">Click to reveal</p>
+                            </div>
+                        </div>
+                        <div class="playlist-item" data-song="3">
+                            <span class="song-number">4</span>
+                            <div class="song-details">
+                                <p class="playlist-title">🎵 Surprise Song 4</p>
+                                <p class="playlist-artist">Click to reveal</p>
+                            </div>
+                        </div>
+                        <div class="playlist-item" data-song="4">
+                            <span class="song-number">5</span>
+                            <div class="song-details">
+                                <p class="playlist-title">🎵 Surprise Song 5</p>
+                                <p class="playlist-artist">Click to reveal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="photo-section">
+                <h3>Our Memories</h3>
+                <div class="photo-gallery">
+                    <div class="photo-container" id="photo1">
+                        <img id="uploadedPhoto1" class="uploaded-photo" src="assets/photos/IMG_5080.jpeg" onerror="this.style.display='none'; document.querySelector('#photo1 .photo-placeholder').style.display='flex';" onclick="document.getElementById('fileInput1').click()">
+                        <div class="photo-placeholder" onclick="document.getElementById('fileInput1').click()">
+                            <span>📸</span>
+                            <p>Our first date</p>
+                            <small>Click to change photo</small>
+                        </div>
+                        <input type="file" id="fileInput1" accept="image/*" style="display: none;" onchange="handlePhotoUpload(event, 'uploadedPhoto1', 'photo1')">
+                    </div>
+                    <div class="photo-container" id="photo2">
+                        <img id="uploadedPhoto2" class="uploaded-photo" src="assets/photos/IMG_5081.jpeg" onerror="this.style.display='none'; document.querySelector('#photo2 .photo-placeholder').style.display='flex';" onclick="document.getElementById('fileInput2').click()">
+                        <div class="photo-placeholder" onclick="document.getElementById('fileInput2').click()">
+                            <span>🎉</span>
+                            <p>Special moments</p>
+                            <small>Click to change photo</small>
+                        </div>
+                        <input type="file" id="fileInput2" accept="image/*" style="display: none;" onchange="handlePhotoUpload(event, 'uploadedPhoto2', 'photo2')">
+                    </div>
+                    <div class="photo-container" id="photo3">
+                        <img id="uploadedPhoto3" class="uploaded-photo" src="assets/photos/IMG_5082.jpeg" onerror="this.style.display='none'; document.querySelector('#photo3 .photo-placeholder').style.display='flex';" onclick="document.getElementById('fileInput3').click()">
+                        <div class="photo-placeholder" onclick="document.getElementById('fileInput3').click()">
+                            <span>💑</span>
+                            <p>Together forever</p>
+                            <small>Click to change photo</small>
+                        </div>
+                        <input type="file" id="fileInput3" accept="image/*" style="display: none;" onchange="handlePhotoUpload(event, 'uploadedPhoto3', 'photo3')">
+                    </div>
+                </div>
+            </section>
+            
+            <footer class="card-footer">
+                <div class="final-message">
+                    <p>Will you be my Valentine? 💕</p>
+                    <p>I can't wait to celebrate with you!</p>
+                </div>
+                <div class="valentine-buttons">
+                    <button class="valentine-btn yes-btn" id="yesBtn">Yes</button>
+                    <button class="valentine-btn no-btn" id="noBtn">No</button>
+                </div>
+                <div class="heart-beat">❤️</div>
+            </footer>
+            
+            <!-- Quiz Modal -->
+            <div class="quiz-modal" id="quizModal">
+                <div class="quiz-content">
+                    <h3>🎉 Amazing Choice! 🎉</h3>
+                    <p>Before we celebrate, answer this quick question:</p>
+                    <div class="quiz-question">
+                        <p>What's our most special memory together?</p>
+                        <div class="quiz-options">
+                            <button class="quiz-option" data-answer="first">Our first date</button>
+                            <button class="quiz-option" data-answer="laughter">When you laughed at my jokes</button>
+                            <button class="quiz-option" data-answer="moment">That perfect sunset moment</button>
+                            <button class="quiz-option" data-answer="all">Every moment with you</button>
+                        </div>
+                    </div>
+                    <button class="quiz-close" id="quizClose">Continue 💕</button>
+                </div>
+            </div>
+        </main>
+        
+        <div class="background-hearts"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
